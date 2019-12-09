@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">MarqueeView</string>
+    <string name="new_user">注册</string>
+    <string name="signin">登录</string>
+    <string name="tip_account">请输入注册账号</string>
+    <string name="tip_password">请输入密码</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="prompt_email">请输入账号</string>
+    <string name="prompt_password">请输入密码</string>
+    <string name="action_sign_in">登录或注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="welcome">"欢迎进入 !"</string>
+    <string name="invalid_username">用户名无效</string>
+    <string name="invalid_password">密码必须大于5个字符</string>
+    <string name="login_failed">"登录失败！"</string>
+    <string name="textColor">设置字体颜色</string>
+    <string name="textSize">设置字体大小</string>
+    <string name="textBackgroud">设置字体背景</string>
+    <string name="preview">预览</string>
+    <string name="exitSettings">退出设置</string>
 </resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/TextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTextSize"
+            android:text="@string/textColor" />
+
+        <Spinner
+            android:id="@+id/spinTextColor"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:entries="@array/textColor"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/TextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTextSize"
+            android:text="@string/textSize" />
+
+        <Spinner
+            android:id="@+id/spinTextSize"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:entries="@array/textSize"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/TextBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTextSize"
+            android:text="@string/textBackgroud" />
+
+        <EditText
+            android:id="@+id/BackroudPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="Autofill,LabelFor,TextFields" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setTextSize"
+            android:text="@string/preview" />
+
+        <Button
+            android:id="@+id/ExitSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exitSettings" />
+    </LinearLayout>
+
+
+    <!--    <com.haitao.marqueeview.MarqueeView-->
+    <!--        android:id="@+id/mMarqueeView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/colorPrimaryDark"-->
+    <!--        app:direction="left"-->
+    <!--        app:isRepeat="true"-->
+    <!--        app:speed="80"-->
+    <!--        app:startPoint="end"-->
+    <!--        app:textSize="16sp"-->
+    <!--        app:textcolor="@color/colorAccent"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+</LinearLayout>
