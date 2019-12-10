@@ -4,7 +4,7 @@
     <string name="signin">登录</string>
     <string name="tip_account">请输入注册账号</string>
     <string name="tip_password">请输入密码</string>
-    <string name="title_activity_login2">Sign in</string>
+    <string name="title_activity_login2">MarqueeView</string>
     <string name="prompt_email">请输入账号</string>
     <string name="prompt_password">请输入密码</string>
     <string name="action_sign_in">登录或注册</string>
@@ -17,5 +17,5 @@
     <string name="textSize">设置字体大小</string>
     <string name="textBackgroud">设置字体背景</string>
     <string name="preview">预览</string>
-    <string name="exitSettings">退出设置</string>
+    <string name="exitSettings">确认设置</string>
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="textBackground">
+        <item>启用</item>
+        <item>不启用</item>
+    </string-array>
+</resources>

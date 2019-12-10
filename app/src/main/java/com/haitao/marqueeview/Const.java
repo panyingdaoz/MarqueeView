@@ -19,4 +19,16 @@ public interface Const {
      * 字体大小
      */
     String  TEXT_SIZE= "TextSize";
+    /**
+     * 字体颜色
+     */
+    String  TEXT_COLOR= "TextColor";
+    /**
+     * 字体背景路径
+     */
+    String  TEXT_BACKGROUND= "TextBackground";
+    /**
+     * 是否启用背景
+     */
+    String  IS_BACKGROUND= "IsBackground";
 }

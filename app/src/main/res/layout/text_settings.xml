@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/text1"
@@ -12,11 +11,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/TextColor"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="setTextSize"
             android:text="@string/textColor" />
 
         <Spinner
@@ -26,11 +25,11 @@
             android:entries="@array/textColor"
             android:spinnerMode="dialog" />
 
-        <Button
+        <TextView
             android:id="@+id/TextSize"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="setTextSize"
             android:text="@string/textSize" />
 
         <Spinner
@@ -45,20 +44,27 @@
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/TextBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="setTextSize"
             android:text="@string/textBackgroud" />
 
-        <EditText
-            android:id="@+id/BackroudPath"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="Autofill,LabelFor,TextFields" />
+        <Spinner
+            android:id="@+id/SpinnerBackground"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:entries="@array/textBackground"
+            android:spinnerMode="dialog" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/BackroudPath"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            tools:ignore="Autofill,LabelFor,TextFields" />-->
 
     </LinearLayout>
 
@@ -68,12 +74,17 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/Preview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="setTextSize"
-            android:text="@string/preview" />
+        <!--        <Button-->
+        <!--            android:id="@+id/TextBackground"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/textBackgroud" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/Preview"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/preview" />-->
 
         <Button
             android:id="@+id/ExitSettings"

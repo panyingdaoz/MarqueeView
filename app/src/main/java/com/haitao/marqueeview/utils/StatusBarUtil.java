@@ -1,14 +1,12 @@
-package com.haitao.marqueeview;
+package com.haitao.marqueeview.utils;
 
 import android.content.Context;
 import android.os.Build;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.haitao.marqueeview.R;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 /**
