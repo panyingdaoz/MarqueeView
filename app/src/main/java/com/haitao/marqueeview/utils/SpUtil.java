@@ -1,7 +1,10 @@
-package com.haitao.marqueeview;
+package com.haitao.marqueeview.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.haitao.marqueeview.Const;
+import com.haitao.marqueeview.MyApplication;
 
 /**
  * 数据存储类

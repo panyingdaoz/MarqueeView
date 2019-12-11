@@ -26,6 +26,8 @@ import android.widget.Toast;
 import com.haitao.marqueeview.MainActivity;
 import com.haitao.marqueeview.R;
 
+import java.util.Objects;
+
 /**
  * @ClassName: LoginActivity3
  * @Description: 登录activity
@@ -39,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_login3);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
@@ -79,10 +82,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 setResult(Activity.RESULT_OK);
 
-                //Complete and destroy login activity once successful
-//                finish();
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

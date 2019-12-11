@@ -3,49 +3,29 @@ package com.haitao.marqueeview;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.Gravity;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.haitao.marqueeview.utils.GetPathFromUri;
+import com.haitao.marqueeview.utils.SpUtil;
 import com.socks.library.KLog;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
-
-import static android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 
 /**
  * @author 86185
  */
 public class SettingsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
-    private Spinner textColor;
-    private Spinner textSize;
-    private Button mTextBackground;
-//    private Button mPreview;
-    private Button mExitSettings;
-//    private EditText mBackroudPath;
     private int screenWidth;
     private int screenHeight;
 
@@ -55,10 +35,10 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.text_settings);
 
-        textSize = findViewById(R.id.spinTextSize);
-        textColor = findViewById(R.id.spinTextColor);
-        mExitSettings = findViewById(R.id.ExitSettings);
-        mTextBackground = findViewById(R.id.TextBackground);
+        Spinner textSize = findViewById(R.id.spinTextSize);
+        Spinner textColor = findViewById(R.id.spinTextColor);
+        Button mExitSettings = findViewById(R.id.ExitSettings);
+        Button mTextBackground = findViewById(R.id.TextBackground);
 
         mExitSettings.setOnClickListener(this);
         mTextBackground.setOnClickListener(this);
@@ -77,7 +57,6 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         Display display = wm.getDefaultDisplay();
         DisplayMetrics dm = new DisplayMetrics();
         display.getRealMetrics(dm);
-//        wm.getDefaultDisplay().getMetrics(dm);
         wm.getDefaultDisplay().getMetrics(dm);
         screenWidth = dm.widthPixels;
         screenHeight = dm.heightPixels;
@@ -88,19 +67,17 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         int screenHeight2 = (int) (screenHeight / scale + 0.5f);
         KLog.e("宽：" + screenWidth2);
         KLog.e("高：" + screenHeight2);
-//        SpUtil.writeInt(Const.SPLIT_WIDTH, screenWidth);
-//        SpUtil.writeInt(Const.SPLIT_HEIGTH, screenHeight);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         KLog.e("接收状态2：" + requestCode);
         if (requestCode == 0) {
+            assert data != null;
             String selectedFilepath = GetPathFromUri.getPath(this, data.getData());
             KLog.e("Select file: " + selectedFilepath);
             if (selectedFilepath != null && !"".equals(selectedFilepath)) {
                 KLog.e("图片路径：" + selectedFilepath);
-//                mBackroudPath.setText(selectedFilepath);
                 SpUtil.writeString(Const.TEXT_BACKGROUND, selectedFilepath);
             }
         }
@@ -118,6 +95,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
                 KLog.e("退出设置");
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             default:
                 break;

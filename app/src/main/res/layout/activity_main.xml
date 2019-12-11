@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:layout_centerInParent="true"
+    android:layout_gravity="center"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -16,29 +17,29 @@
     <!--        android:onClick="setTextSize"-->
     <!--        android:text="设置字体大小" />-->
 
-    <com.haitao.marqueeview.MarqueeView
-        android:id="@+id/mMarqueeView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
-        app:direction="left"
-        app:isRepeat="true"
-        app:speed="80"
-        app:startPoint="end"
-        app:textSize="16sp"
-        app:textcolor="@color/colorAccent"
-        tools:ignore="MissingConstraints" />
-    <!--    <com.dalong.marqueeview.MarqueeView-->
+    <!--    <com.haitao.marqueeview.MarqueeView-->
     <!--        android:id="@+id/mMarqueeView"-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/colorPrimaryDark"-->
     <!--        app:direction="left"-->
     <!--        app:isRepeat="true"-->
-    <!--        android:background="@color/colorPrimaryDark"-->
-    <!--        app:speed="50"-->
+    <!--        app:speed="80"-->
     <!--        app:startPoint="end"-->
     <!--        app:textSize="16sp"-->
     <!--        app:textcolor="@color/colorAccent"-->
     <!--        tools:ignore="MissingConstraints" />-->
+    <com.haitao.marqueeview.MarqueeView
+        android:id="@+id/mMarqueeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:direction="left"
+        app:isRepeat="true"
+        app:speed="50"
+        app:startPoint="end"
+        app:textSize="16sp"
+        app:textcolor="@color/colorAccent"
+        tools:ignore="MissingConstraints" />
 
 </LinearLayout>
